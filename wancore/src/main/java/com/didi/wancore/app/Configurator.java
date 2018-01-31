@@ -7,10 +7,7 @@ import android.support.v4.util.ArrayMap;
  */
 
 public class Configurator {
-    private static final String BASE_CONTEXT = "BASE_CONTEXT";
-    private static final String BASE_URL = "BASE_URL";
     private static ArrayMap<String,Object> MAP = new ArrayMap<>();
-
     /**
      *
      * @param key

@@ -6,7 +6,7 @@ import android.content.Context;
  * Created by didi on 2018/1/30.
  */
 
-public class Market {
+public class AppCore {
     /**
      *  get configurator
      * @return Configurator single instance

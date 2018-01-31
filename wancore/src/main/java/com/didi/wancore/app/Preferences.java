@@ -10,7 +10,7 @@ import android.support.annotation.Nullable;
 
 public class Preferences{
 
-    private static final SharedPreferences PREFERENCES = PreferenceManager.getDefaultSharedPreferences(Market.context());
+    private static final SharedPreferences PREFERENCES = PreferenceManager.getDefaultSharedPreferences(AppCore.context());
 
     private static SharedPreferences getPreference(){
         return PREFERENCES;
