@@ -3,7 +3,7 @@ package com.didi.wancore.activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toolbar;
+import android.support.v7.widget.Toolbar;
 
 import com.didi.wancore.R;
 
@@ -14,7 +14,7 @@ import com.didi.wancore.R;
 public abstract class BaseActivity extends AppCompatActivity {
     protected Toolbar mToolbar = null;
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (setLayoutID()!=0){
             setContentView(setLayoutID());

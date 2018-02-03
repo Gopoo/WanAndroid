@@ -14,6 +14,6 @@ public class WanApplication extends BaseApplication {
         super.onCreate();
         AppCore.context(getApplicationContext());
         AppCore.url("http://www.wanandroid.com/");
-
+        AppCore.pkgname(getPackageName());
     }
 }

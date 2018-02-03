@@ -6,5 +6,6 @@ package com.didi.wancore.app;
 
 public enum ConfigType {
     BASE_CONTEXT,
-    BASE_URL
+    BASE_URL,
+    PKG_NAME
 }

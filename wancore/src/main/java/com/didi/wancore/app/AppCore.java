@@ -32,6 +32,13 @@ public class AppCore {
     }
 
     /**
+     *  set package name
+     * @param name
+     */
+    public static final void pkgname(String name){
+        getConfigurator().setConfiguration(ConfigType.PKG_NAME.name(),name);
+    }
+    /**
      *
      * @return base url
      */
@@ -45,5 +52,8 @@ public class AppCore {
      */
     public static final Context context(){
         return (Context) getConfigurator().getConfiguration(ConfigType.BASE_CONTEXT.name());
+    }
+    public static final String pkgname(){
+        return (String) getConfigurator().getConfiguration(ConfigType.PKG_NAME.name());
     }
 }
