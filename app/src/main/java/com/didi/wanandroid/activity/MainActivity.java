@@ -4,19 +4,26 @@ package com.didi.wanandroid.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 
 import com.didi.wanandroid.R;
 import com.didi.wanandroid.base.BaseActivity;
-import com.didi.wanandroid.view.BottomBean;
-import com.didi.wanandroid.view.BottomItems;
-import com.didi.wancore.utils.LogUtils;
+import com.didi.wanandroid.fragment.ChoseFragment;
+import com.didi.wanandroid.fragment.CollectFragment;
+import com.didi.wanandroid.fragment.HomeFragnment;
+import com.didi.wanandroid.fragment.UserFragment;
+import com.didi.wanandroid.helper.NavigationPagerHelper;
+import com.didi.wanandroid.view.ViewPagerAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 
 public class MainActivity extends BaseActivity {
-
+    @BindView(R.id.viewpager)
+    ViewPager viewPager;
     @BindView(R.id.bottom_navigation)
     BottomNavigationView bar;
     @Override
@@ -26,16 +33,16 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void init() {
-
-        BottomItems items = BottomItems.Holder.creat();
-        List<BottomBean> itemlist= items
-                .add(new BottomBean(R.drawable.ic_home_blue_24dp,"首页"))
-                .add(new BottomBean(R.drawable.ic_stars_blue_24dp,"热点"))
-                .add(new BottomBean(R.drawable.ic_bookmark_blue_24dp,"收藏"))
-                .add(new BottomBean(R.drawable.ic_person_blue_24dp,"我"))
-                .get();
-        LogUtils.w(itemlist.size()+"");
-//        bar.set
+        NavigationPagerHelper.help(viewPager,bar);
+        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(),fragments()));
+    }
+    private List<Fragment> fragments(){
+        List<Fragment> fragments = new ArrayList<Fragment>();
+        fragments.add(new HomeFragnment());
+        fragments.add(new ChoseFragment());
+        fragments.add(new CollectFragment());
+        fragments.add(new UserFragment());
+        return fragments;
     }
     public static void intentFrom(Context context){
         Intent i = new Intent(context,MainActivity.class);
