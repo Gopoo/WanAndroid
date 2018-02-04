@@ -60,4 +60,5 @@ public class RetrofitClient {
         return RETROFIT_CLIENT.create(service);
     }
 
+    public static void init(){}
 }

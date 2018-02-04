@@ -7,6 +7,11 @@
     tools:context="com.didi.wanandroid.MainActivity">
   <include layout="@layout/topbar_base"/>
   <Button
+      android:text="GetCookie"
+      android:id="@+id/btn_get_cookie"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+  <Button
       android:text="Signin"
       android:id="@+id/btn_signin"
       android:layout_width="wrap_content"

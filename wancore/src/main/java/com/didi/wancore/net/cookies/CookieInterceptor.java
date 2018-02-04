@@ -1,8 +1,6 @@
 package com.didi.wancore.net.cookies;
 
 import com.didi.wancore.account.AccountManger;
-import com.didi.wancore.utils.LogUtils;
-
 
 import java.io.IOException;
 import java.util.List;
@@ -36,7 +34,8 @@ public class CookieInterceptor implements Interceptor {
         //we need save cookies when user register or signin
         if (response.request().url().url().toString().contains("/user/")){
             List<String> cookies = response.headers().values("Set-Cookie");
-            StringBuilder sb = new StringBuilder();
+//            LogUtils.w();
+            StringBuffer sb = new StringBuffer();
             for (String c : cookies){
                 sb.append(c);
             }

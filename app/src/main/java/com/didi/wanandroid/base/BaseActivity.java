@@ -1,4 +1,4 @@
-package com.didi.wancore.activity;
+package com.didi.wanandroid.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,18 +7,19 @@ import android.support.v7.widget.Toolbar;
 
 import com.didi.wancore.R;
 
+import butterknife.ButterKnife;
+
 /**
  * Created by didi on 2018/1/30.
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
-    protected Toolbar mToolbar = null;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (setLayoutID()!=0){
             setContentView(setLayoutID());
-            mToolbar = findViewById(R.id.tb_toolbar);
+            ButterKnife.bind(this);
             init();
         }
 
@@ -30,4 +31,9 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     public abstract int setLayoutID();
     public abstract void init();
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }
