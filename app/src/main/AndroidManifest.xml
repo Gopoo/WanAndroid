@@ -16,22 +16,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="allowBackup">
-        <activity android:name=".MainActivity"
+        <activity android:name=".activity.MainActivity"
+            android:theme="@style/AppTheme"
             android:launchMode="singleTask"
             android:taskAffinity="com.didi.wanandroid.main_task"
             />
         <activity
-            android:name=".SigninActivity"
+            android:name=".activity.SigninActivity"
             android:taskAffinity="com.didi.wanandroid.main_task"
             android:windowSoftInputMode="stateVisible|adjustResize" />
-        <activity android:name=".StartActivity">
+        <activity android:name=".activity.StartActivity"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity"
+        <activity android:name=".activity.RegisterActivity"
             android:launchMode="singleTask"
             android:windowSoftInputMode="stateVisible|adjustResize"
             android:taskAffinity="com.didi.wanandroid.main_task"

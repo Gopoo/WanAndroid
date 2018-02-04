@@ -1,11 +1,9 @@
 package com.didi.wanandroid.base;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
-import com.didi.wancore.R;
 
 import butterknife.ButterKnife;
 

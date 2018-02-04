@@ -1,10 +1,11 @@
-package com.didi.wanandroid;
+package com.didi.wanandroid.activity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.didi.wanandroid.R;
 import com.didi.wanandroid.base.BaseActivity;
 import com.didi.wanandroid.view.DialogManager;
 import com.didi.wancore.bean.SignBean;

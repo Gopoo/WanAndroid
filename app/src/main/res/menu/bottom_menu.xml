@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_home"
+        android:icon="@drawable/ic_home_blue_24dp"
+        android:title="首页" />
+    <item
+        android:id="@+id/item_chose"
+        android:icon="@drawable/ic_stars_blue_24dp"
+        android:title="精选" />
+    <item
+        android:id="@+id/item_collect"
+        android:icon="@drawable/ic_bookmark_blue_24dp"
+        android:title="收藏" />
+    <item
+        android:id="@+id/item_user"
+        android:icon="@drawable/ic_person_blue_24dp"
+        android:title="我" />
+</menu>

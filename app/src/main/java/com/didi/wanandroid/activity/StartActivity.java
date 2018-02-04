@@ -1,4 +1,4 @@
-package com.didi.wanandroid;
+package com.didi.wanandroid.activity;
 
 import android.content.Context;
 import android.os.Handler;
@@ -6,14 +6,16 @@ import android.os.Message;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.didi.wanandroid.R;
+import com.didi.wanandroid.base.BaseActivity;
+
 import java.lang.ref.WeakReference;
 
-public class StartActivity extends AppCompatActivity {
+public class StartActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start);
         ProHandler handler = new ProHandler(this);
         handler.sendEmptyMessageDelayed(0,2500);
         //load retrofit
@@ -23,6 +25,17 @@ public class StartActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public int setLayoutID() {
+        return R.layout.activity_start;
+    }
+
+    @Override
+    public void init() {
+
+    }
+
     private class ProHandler extends Handler{
         private WeakReference<Context> contextWeakReference = null;
         public ProHandler(Context context){

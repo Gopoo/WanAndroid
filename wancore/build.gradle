@@ -27,7 +27,7 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //noinspection GradleCompatible
-    implementation 'com.android.support:design:26.1.0'
+//    implementation 'com.android.support:design:26.1.0'
 
     //webview
     compile 'com.just.agentweb:agentweb:3.1.0'
